@@ -28,14 +28,6 @@ services:
     volumes:
       - ./wordpress:/var/www/html
       - ./sage-theme:/var/www/html/wp-content/themes/sage-theme
-    command: >
-      bash -c "
-      docker-php-ext-install pdo pdo_mysql &&
-      curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &&
-      chmod +x wp-cli.phar &&
-      mv wp-cli.phar /usr/local/bin/wp &&
-      apache2-foreground
-      "
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
