@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.list-results table {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .list-results {
+    overflow-x: auto !important;
+  }
+  table {
+    min-width: 1000px;
+  }
+}
+
