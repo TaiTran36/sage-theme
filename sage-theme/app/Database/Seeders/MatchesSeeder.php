@@ -41,6 +41,7 @@ class MatchesSeeder extends Seeder
                             return $team->country_id === $countryId;
                         })
                     );
+                    dd($listTeamsByCountry);
                     if(sizeof($listTeamsByCountry) > 1) {
                         $listMatchesWithCompetition = array_merge($listMatchesWithCompetition, $this->randomMatchTeams($listTeamsByCountry));
                     }

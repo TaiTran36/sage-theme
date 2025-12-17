@@ -24,6 +24,7 @@
         </div>
       </div>
       <div class="list-results">
+        @dd($groupMatches)
         <table class="table-auto border-collapse mt-6">
           @if($groupMatches)
             @foreach($groupMatches as $group)
